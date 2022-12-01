@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EDFE32D29393BAF00A88DBD /* SweetDreamsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE32C29393BAF00A88DBD /* SweetDreamsApp.swift */; };
+		8EDFE32F29393BAF00A88DBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE32E29393BAF00A88DBD /* ContentView.swift */; };
+		8EDFE33129393BBA00A88DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDFE33029393BBA00A88DBD /* Assets.xcassets */; };
+		8EDFE33429393BBA00A88DBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDFE33329393BBA00A88DBD /* Preview Assets.xcassets */; };
+		8EDFE33E29393BBB00A88DBD /* SweetDreamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE33D29393BBB00A88DBD /* SweetDreamsTests.swift */; };
+		8EDFE34829393BBB00A88DBD /* SweetDreamsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE34729393BBB00A88DBD /* SweetDreamsUITests.swift */; };
+		8EDFE34A29393BBB00A88DBD /* SweetDreamsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE34929393BBB00A88DBD /* SweetDreamsUITestsLaunchTests.swift */; };
+		8EDFE35829393C2800A88DBD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE35729393C2800A88DBD /* CoreDataManager.swift */; };
+		8EDFE35B29393C7400A88DBD /* SweetDreamsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE35929393C7400A88DBD /* SweetDreamsModel.xcdatamodeld */; };
+		8EDFE35D29393D8F00A88DBD /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE35C29393D8F00A88DBD /* NewEntryView.swift */; };
+		8EDFE35F29393DE600A88DBD /* AllEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */; };
+		8EDFE36129393E5600A88DBD /* DreamEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE36029393E5600A88DBD /* DreamEntryView.swift */; };
+		8EDFE36329393E8700A88DBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE36229393E8700A88DBD /* Card.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EDFE33A29393BBB00A88DBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EDFE32129393BAF00A88DBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EDFE32829393BAF00A88DBD;
+			remoteInfo = SweetDreams;
+		};
+		8EDFE34429393BBB00A88DBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EDFE32129393BAF00A88DBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EDFE32829393BAF00A88DBD;
+			remoteInfo = SweetDreams;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8EDFE32929393BAF00A88DBD /* SweetDreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetDreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EDFE32C29393BAF00A88DBD /* SweetDreamsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDreamsApp.swift; sourceTree = "<group>"; };
+		8EDFE32E29393BAF00A88DBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8EDFE33029393BBA00A88DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EDFE33329393BBA00A88DBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8EDFE33929393BBB00A88DBD /* SweetDreamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetDreamsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EDFE33D29393BBB00A88DBD /* SweetDreamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDreamsTests.swift; sourceTree = "<group>"; };
+		8EDFE34329393BBB00A88DBD /* SweetDreamsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetDreamsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EDFE34729393BBB00A88DBD /* SweetDreamsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDreamsUITests.swift; sourceTree = "<group>"; };
+		8EDFE34929393BBB00A88DBD /* SweetDreamsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDreamsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EDFE35729393C2800A88DBD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8EDFE35A29393C7400A88DBD /* SweetDreamsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SweetDreamsModel.xcdatamodel; sourceTree = "<group>"; };
+		8EDFE35C29393D8F00A88DBD /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
+		8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEntriesView.swift; sourceTree = "<group>"; };
+		8EDFE36029393E5600A88DBD /* DreamEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamEntryView.swift; sourceTree = "<group>"; };
+		8EDFE36229393E8700A88DBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EDFE32629393BAF00A88DBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDFE33629393BBB00A88DBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDFE34029393BBB00A88DBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EDFE32029393BAF00A88DBD = {
+			isa = PBXGroup;
+			children = (
+				8EDFE32B29393BAF00A88DBD /* SweetDreams */,
+				8EDFE33C29393BBB00A88DBD /* SweetDreamsTests */,
+				8EDFE34629393BBB00A88DBD /* SweetDreamsUITests */,
+				8EDFE32A29393BAF00A88DBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EDFE32A29393BAF00A88DBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EDFE32929393BAF00A88DBD /* SweetDreams.app */,
+				8EDFE33929393BBB00A88DBD /* SweetDreamsTests.xctest */,
+				8EDFE34329393BBB00A88DBD /* SweetDreamsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EDFE32B29393BAF00A88DBD /* SweetDreams */ = {
+			isa = PBXGroup;
+			children = (
+				8EDFE35629393BEC00A88DBD /* Managers */,
+				8EDFE32C29393BAF00A88DBD /* SweetDreamsApp.swift */,
+				8EDFE32E29393BAF00A88DBD /* ContentView.swift */,
+				8EDFE35C29393D8F00A88DBD /* NewEntryView.swift */,
+				8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */,
+				8EDFE36029393E5600A88DBD /* DreamEntryView.swift */,
+				8EDFE36229393E8700A88DBD /* Card.swift */,
+				8EDFE33029393BBA00A88DBD /* Assets.xcassets */,
+				8EDFE33229393BBA00A88DBD /* Preview Content */,
+				8EDFE35929393C7400A88DBD /* SweetDreamsModel.xcdatamodeld */,
+			);
+			path = SweetDreams;
+			sourceTree = "<group>";
+		};
+		8EDFE33229393BBA00A88DBD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8EDFE33329393BBA00A88DBD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8EDFE33C29393BBB00A88DBD /* SweetDreamsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EDFE33D29393BBB00A88DBD /* SweetDreamsTests.swift */,
+			);
+			path = SweetDreamsTests;
+			sourceTree = "<group>";
+		};
+		8EDFE34629393BBB00A88DBD /* SweetDreamsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8EDFE34729393BBB00A88DBD /* SweetDreamsUITests.swift */,
+				8EDFE34929393BBB00A88DBD /* SweetDreamsUITestsLaunchTests.swift */,
+			);
+			path = SweetDreamsUITests;
+			sourceTree = "<group>";
+		};
+		8EDFE35629393BEC00A88DBD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8EDFE35729393C2800A88DBD /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EDFE32829393BAF00A88DBD /* SweetDreams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EDFE34D29393BBB00A88DBD /* Build configuration list for PBXNativeTarget "SweetDreams" */;
+			buildPhases = (
+				8EDFE32529393BAF00A88DBD /* Sources */,
+				8EDFE32629393BAF00A88DBD /* Frameworks */,
+				8EDFE32729393BAF00A88DBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SweetDreams;
+			productName = SweetDreams;
+			productReference = 8EDFE32929393BAF00A88DBD /* SweetDreams.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EDFE33829393BBB00A88DBD /* SweetDreamsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EDFE35029393BBB00A88DBD /* Build configuration list for PBXNativeTarget "SweetDreamsTests" */;
+			buildPhases = (
+				8EDFE33529393BBB00A88DBD /* Sources */,
+				8EDFE33629393BBB00A88DBD /* Frameworks */,
+				8EDFE33729393BBB00A88DBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EDFE33B29393BBB00A88DBD /* PBXTargetDependency */,
+			);
+			name = SweetDreamsTests;
+			productName = SweetDreamsTests;
+			productReference = 8EDFE33929393BBB00A88DBD /* SweetDreamsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EDFE34229393BBB00A88DBD /* SweetDreamsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EDFE35329393BBB00A88DBD /* Build configuration list for PBXNativeTarget "SweetDreamsUITests" */;
+			buildPhases = (
+				8EDFE33F29393BBB00A88DBD /* Sources */,
+				8EDFE34029393BBB00A88DBD /* Frameworks */,
+				8EDFE34129393BBB00A88DBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EDFE34529393BBB00A88DBD /* PBXTargetDependency */,
+			);
+			name = SweetDreamsUITests;
+			productName = SweetDreamsUITests;
+			productReference = 8EDFE34329393BBB00A88DBD /* SweetDreamsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EDFE32129393BAF00A88DBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					8EDFE32829393BAF00A88DBD = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					8EDFE33829393BBB00A88DBD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 8EDFE32829393BAF00A88DBD;
+					};
+					8EDFE34229393BBB00A88DBD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 8EDFE32829393BAF00A88DBD;
+					};
+				};
+			};
+			buildConfigurationList = 8EDFE32429393BAF00A88DBD /* Build configuration list for PBXProject "SweetDreams" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EDFE32029393BAF00A88DBD;
+			productRefGroup = 8EDFE32A29393BAF00A88DBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EDFE32829393BAF00A88DBD /* SweetDreams */,
+				8EDFE33829393BBB00A88DBD /* SweetDreamsTests */,
+				8EDFE34229393BBB00A88DBD /* SweetDreamsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EDFE32729393BAF00A88DBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDFE33429393BBA00A88DBD /* Preview Assets.xcassets in Resources */,
+				8EDFE33129393BBA00A88DBD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDFE33729393BBB00A88DBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDFE34129393BBB00A88DBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EDFE32529393BAF00A88DBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDFE36129393E5600A88DBD /* DreamEntryView.swift in Sources */,
+				8EDFE35829393C2800A88DBD /* CoreDataManager.swift in Sources */,
+				8EDFE32F29393BAF00A88DBD /* ContentView.swift in Sources */,
+				8EDFE35B29393C7400A88DBD /* SweetDreamsModel.xcdatamodeld in Sources */,
+				8EDFE32D29393BAF00A88DBD /* SweetDreamsApp.swift in Sources */,
+				8EDFE35D29393D8F00A88DBD /* NewEntryView.swift in Sources */,
+				8EDFE35F29393DE600A88DBD /* AllEntriesView.swift in Sources */,
+				8EDFE36329393E8700A88DBD /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDFE33529393BBB00A88DBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDFE33E29393BBB00A88DBD /* SweetDreamsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDFE33F29393BBB00A88DBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDFE34829393BBB00A88DBD /* SweetDreamsUITests.swift in Sources */,
+				8EDFE34A29393BBB00A88DBD /* SweetDreamsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EDFE33B29393BBB00A88DBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EDFE32829393BAF00A88DBD /* SweetDreams */;
+			targetProxy = 8EDFE33A29393BBB00A88DBD /* PBXContainerItemProxy */;
+		};
+		8EDFE34529393BBB00A88DBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EDFE32829393BAF00A88DBD /* SweetDreams */;
+			targetProxy = 8EDFE34429393BBB00A88DBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8EDFE34B29393BBB00A88DBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8EDFE34C29393BBB00A88DBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EDFE34E29393BBB00A88DBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SweetDreams/Preview Content\"";
+				DEVELOPMENT_TEAM = 2R353324VD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Taryn.SweetDreams;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EDFE34F29393BBB00A88DBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SweetDreams/Preview Content\"";
+				DEVELOPMENT_TEAM = 2R353324VD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Taryn.SweetDreams;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8EDFE35129393BBB00A88DBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2R353324VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Taryn.SweetDreamsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetDreams.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SweetDreams";
+			};
+			name = Debug;
+		};
+		8EDFE35229393BBB00A88DBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2R353324VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Taryn.SweetDreamsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetDreams.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SweetDreams";
+			};
+			name = Release;
+		};
+		8EDFE35429393BBB00A88DBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2R353324VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Taryn.SweetDreamsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SweetDreams;
+			};
+			name = Debug;
+		};
+		8EDFE35529393BBB00A88DBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2R353324VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Taryn.SweetDreamsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SweetDreams;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EDFE32429393BAF00A88DBD /* Build configuration list for PBXProject "SweetDreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EDFE34B29393BBB00A88DBD /* Debug */,
+				8EDFE34C29393BBB00A88DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EDFE34D29393BBB00A88DBD /* Build configuration list for PBXNativeTarget "SweetDreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EDFE34E29393BBB00A88DBD /* Debug */,
+				8EDFE34F29393BBB00A88DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EDFE35029393BBB00A88DBD /* Build configuration list for PBXNativeTarget "SweetDreamsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EDFE35129393BBB00A88DBD /* Debug */,
+				8EDFE35229393BBB00A88DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EDFE35329393BBB00A88DBD /* Build configuration list for PBXNativeTarget "SweetDreamsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EDFE35429393BBB00A88DBD /* Debug */,
+				8EDFE35529393BBB00A88DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8EDFE35929393C7400A88DBD /* SweetDreamsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8EDFE35A29393C7400A88DBD /* SweetDreamsModel.xcdatamodel */,
+			);
+			currentVersion = 8EDFE35A29393C7400A88DBD /* SweetDreamsModel.xcdatamodel */;
+			path = SweetDreamsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8EDFE32129393BAF00A88DBD /* Project object */;
+}
