@@ -16,7 +16,6 @@ struct SweetDreamsApp: App {
             NavigationStack{
                 ContentView().environment(\.managedObjectContext, persistentContainer.viewContext)
             }
-            
         }
     }
 }

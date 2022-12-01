@@ -20,6 +20,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var goToNewEntry: Bool = false
+    @State private var goToAllEntries: Bool = false
    
     var body: some View {
         NavigationStack{
@@ -30,21 +31,29 @@ struct ContentView: View {
                 VStack {
                     Divider()
                     Spacer()
-//                    NavigationLink(destination: NewEntryView(), isActive: $goToNewEntry)
-//                    {
-//                        Button(action: {
-//                            goToNewEntry = true
-//                        }){
-//                            Text("Record a Dream")
-//                        }
-//                    }
                     Button(action: {
                         goToNewEntry = true
                     }){
                         Text("Record a Dream")
+                            .foregroundColor(.white)
                     }.navigationDestination(isPresented: $goToNewEntry) {
                         NewEntryView()
                     }
+                    .padding()
+                    .background(CustomColor.buttonPurple)
+                    .clipShape(Capsule())
+                    
+                    Button(action: {
+                        goToAllEntries = true
+                    }){
+                        Text("View Dream Logs")
+                            .foregroundColor(.white)
+                    }.navigationDestination(isPresented: $goToAllEntries) {
+                        AllEntriesView()
+                    }
+                    .padding()
+                    .background(CustomColor.buttonPeriwinkle)
+                    .clipShape(Capsule())
                     
                 }
                 Spacer()
