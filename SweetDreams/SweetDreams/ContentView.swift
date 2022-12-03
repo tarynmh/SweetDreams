@@ -14,6 +14,10 @@ struct CustomColor {
     static let LavenderBox = Color("LavenderBox")
     static let buttonPurple = Color("ButtonPurple")
     static let buttonPeriwinkle = Color("ButtonPeriwinkle")
+    static let badDream = Color("BadDream")
+    static let neutralDream = Color("NeutralDream")
+    static let goodDream = Color("GoodDream")
+    static let titleColor = Color("TitleColor")
 }
 
 struct ContentView: View {
@@ -56,11 +60,17 @@ struct ContentView: View {
                     .clipShape(Capsule())
                     
                 }
+                .padding(30)
+                .padding()
+                .background(
+                        Image("StarsBg")
+                    )
                 Spacer()
                 Image("MoonLogo")
                     .resizable()
                     .scaledToFit()
                     .frame(width:300, height: 300)
+                Spacer()
                 
             }
         }

@@ -24,16 +24,72 @@ struct AllEntriesView: View {
             }
         }
         
-        private func deleteEntry(at offsets: IndexSet) {
+        func deleteEntry(at offsets: IndexSet) {
             offsets.forEach { index in
                 let entry = allEntries[index]
                 viewContext.delete(entry)
-                
                 do {
                     try viewContext.save()
                 } catch {
                     print(error.localizedDescription)
                 }
+            }
+        }
+    
+    private func getDreamIcon(_ value: String) -> any View {
+            let category = Category(rawValue: value)
+            
+            switch category {
+                case .nightmare:
+                return Image(systemName: "arrowtriangle.down.fill")
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(CustomColor.badDream)
+                    .font(.system(size: 18))
+            case .neutral:
+                return Image(systemName: "plus.forwardslash.minus")
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(CustomColor.neutralDream)
+                    .font(.system(size: 18))
+                case .good:
+                    return Image(systemName: "arrowtriangle.up.fill")
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(CustomColor.goodDream)
+                    .font(.system(size: 18))
+                default:
+                return Image(systemName: "theatermasks")
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(.blue)
+                    .font(.system(size: 18))
+            }
+        }
+    
+    private func getDreamIcon(_ value: String) -> String {
+            let category = Category(rawValue: value)
+            
+            switch category {
+                case .nightmare:
+                return "arrowtriangle.down.fill"
+            case .neutral:
+                return "minus"
+                case .good:
+                    return "arrowtriangle.up.fill"
+                default:
+                return "minus"
+            }
+        }
+    
+    private func getDreamColor(_ value: String) -> Color {
+            let category = Category(rawValue: value)
+            
+            switch category {
+                case .nightmare:
+                return CustomColor.badDream
+            case .neutral:
+                return .white
+                case .good:
+                return CustomColor.goodDream
+                default:
+                return .gray
             }
         }
     
@@ -48,13 +104,18 @@ struct AllEntriesView: View {
                     ScrollView{
                         ForEach(allEntries) { entry in
                             HStack {
-                                DreamEntryView(card: Card(title: entry.title!, topic: entry.topic!, emotion: entry.emotion!, isFave: entry.isFave, date:entry.date!))
+                                DreamEntryView(card: Card(title: entry.title!, topic: entry.topic!, emotion: entry.emotion!, isFave: entry.isFave, date:entry.date!), dreamIcon: getDreamIcon(entry.emotion!), dreamColor: getDreamColor(entry.emotion!))
                                     
                             }
                         }
                         .onDelete(perform: deleteEntry)
                     }
                 }
+                .padding(30)
+                .padding()
+                .background(
+                        Image("StarsBg")
+                    )
                 
             }
         }

@@ -23,8 +23,7 @@ extension Category {
 
 struct NewEntryView: View {
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = .orange
-//        UISegmentedControl.appearance().layer.backgroundColor = .blue
+        UISegmentedControl.appearance().selectedSegmentTintColor = .systemMint
     }
     
     
@@ -52,24 +51,25 @@ struct NewEntryView: View {
 
        }
     
-    private func styleForPriority(_ value: String) -> Color {
+    private func colorDreamType(_ value: String) -> Color {
             let category = Category(rawValue: value)
             
             switch category {
                 case .nightmare:
-                    return Color.red
+                return CustomColor.badDream
             case .neutral:
-                    return Color.blue
+                return CustomColor.neutralDream
                 case .good:
-                    return Color.green
+                    return CustomColor.goodDream
                 default:
-                    return Color.black
+                return CustomColor.LavenderBox
             }
         }
     
     
     private func updateEntry(_ entry: Entry) {
         
+//        Note: I tried entry.isFave.toggle(), but it couldn't be assigned to bool
         entry.isFave = !entry.isFave
         
         do {
