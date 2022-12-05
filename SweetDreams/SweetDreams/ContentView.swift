@@ -62,7 +62,8 @@ struct ContentView: View {
                             .font(.title)
                             .foregroundColor(.white)
                     }.navigationDestination(isPresented: $goToAllEntries) {
-                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
+//                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
+                        SortView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
                     }
                     .padding()
                     .padding([.leading,.trailing], 15)
@@ -88,7 +89,6 @@ struct ContentView: View {
                 
             }
         }
-        
     }
 }
 

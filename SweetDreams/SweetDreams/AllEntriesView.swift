@@ -17,6 +17,8 @@ struct AllEntriesView: View {
 
     @Binding var goToNewEntry: Bool
     @Binding var goToAllEntries: Bool
+    
+    var filterBy: String
         
         func deleteEntry(at offsets: IndexSet) {
             offsets.forEach { index in
@@ -72,7 +74,7 @@ struct AllEntriesView: View {
                     Divider()
                     Spacer()
                     ScrollView{
-                        ForEach(allEntries.filter{entry -> Bool in return entry.emotion == "Good Dream"}) { entry in
+                        ForEach(allEntries.filter{entry -> Bool in return entry.emotion == filterBy}) { entry in
                             HStack {
                                 DreamEntryView(card: Card(title: entry.title!, topic: entry.topic!, emotion: entry.emotion!, isFave: entry.isFave, date:entry.date!), dreamIcon: getDreamIcon(entry.emotion!), dreamColor: getDreamColor(entry.emotion!))
                                     

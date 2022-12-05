@@ -141,7 +141,7 @@ struct NewEntryView: View {
                     }){
                         Text("Save")
                     }.navigationDestination(isPresented: $goToEntries) {
-                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
+                        SortView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
                     }
                     
                     .padding(10)

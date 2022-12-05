@@ -20,6 +20,7 @@
 		8EDFE35F29393DE600A88DBD /* AllEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */; };
 		8EDFE36129393E5600A88DBD /* DreamEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE36029393E5600A88DBD /* DreamEntryView.swift */; };
 		8EDFE36329393E8700A88DBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE36229393E8700A88DBD /* Card.swift */; };
+		8EDFE365293D887B00A88DBD /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE364293D887A00A88DBD /* SortView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEntriesView.swift; sourceTree = "<group>"; };
 		8EDFE36029393E5600A88DBD /* DreamEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamEntryView.swift; sourceTree = "<group>"; };
 		8EDFE36229393E8700A88DBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8EDFE364293D887A00A88DBD /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				8EDFE32E29393BAF00A88DBD /* ContentView.swift */,
 				8EDFE35C29393D8F00A88DBD /* NewEntryView.swift */,
 				8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */,
+				8EDFE364293D887A00A88DBD /* SortView.swift */,
 				8EDFE36029393E5600A88DBD /* DreamEntryView.swift */,
 				8EDFE36229393E8700A88DBD /* Card.swift */,
 				8EDFE33029393BBA00A88DBD /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 				8EDFE35B29393C7400A88DBD /* SweetDreamsModel.xcdatamodeld in Sources */,
 				8EDFE32D29393BAF00A88DBD /* SweetDreamsApp.swift in Sources */,
 				8EDFE35D29393D8F00A88DBD /* NewEntryView.swift in Sources */,
+				8EDFE365293D887B00A88DBD /* SortView.swift in Sources */,
 				8EDFE35F29393DE600A88DBD /* AllEntriesView.swift in Sources */,
 				8EDFE36329393E8700A88DBD /* Card.swift in Sources */,
 			);
