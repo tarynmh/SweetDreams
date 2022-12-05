@@ -9,18 +9,28 @@ import SwiftUI
 
 struct DreamEntryView: View {
     let card: Card
+    let dreamIcon: String
+    let dreamColor: Color
 
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(CustomColor.LavenderBox)
+                .fill(CustomColor.neutralDream)
 //                .padding([.leading, .trailing], 5)
 
             VStack {
+                Image(systemName: dreamIcon)
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(dreamColor)
+                    .font(.system(size: 18))
+                    .padding(3)
                 Text(card.title)
                     .font(.largeTitle)
-                    .foregroundColor(.black)
+                    .foregroundColor(CustomColor.titleColor)
                     .padding([.leading, .trailing], 5)
+                
+                Divider()
+                    .overlay(.white)
 
                 Text(card.topic)
                     .font(.title)

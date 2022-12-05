@@ -13,9 +13,9 @@ struct SweetDreamsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack{
+//            NavigationStack{
                 ContentView().environment(\.managedObjectContext, persistentContainer.viewContext)
-            }
+//            }
         }
     }
 }

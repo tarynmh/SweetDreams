@@ -14,6 +14,10 @@ struct CustomColor {
     static let LavenderBox = Color("LavenderBox")
     static let buttonPurple = Color("ButtonPurple")
     static let buttonPeriwinkle = Color("ButtonPeriwinkle")
+    static let badDream = Color("BadDream")
+    static let neutralDream = Color("NeutralDream")
+    static let goodDream = Color("GoodDream")
+    static let titleColor = Color("TitleColor")
 }
 
 struct ContentView: View {
@@ -21,46 +25,66 @@ struct ContentView: View {
     
     @State private var goToNewEntry: Bool = false
     @State private var goToAllEntries: Bool = false
+    
    
     var body: some View {
         NavigationStack{
-            ZStack {
+            ZStack(alignment: .top) {
                 LinearGradient(gradient: Gradient(colors: [CustomColor.Navy, CustomColor.SkyPurple]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
                 VStack {
-                    Divider()
                     Spacer()
+                    Divider()
+                        .overlay(.white)
+                        .padding(40)
                     Button(action: {
                         goToNewEntry = true
                     }){
                         Text("Record a Dream")
+                            .font(.title)
                             .foregroundColor(.white)
                     }.navigationDestination(isPresented: $goToNewEntry) {
-                        NewEntryView()
+                        NewEntryView(goToNewEntry: $goToNewEntry, goToAllEntries: $goToAllEntries)
                     }
                     .padding()
+                    .padding([.leading,.trailing], 20)
                     .background(CustomColor.buttonPurple)
                     .clipShape(Capsule())
+                    
+                    Spacer()
+                        .frame(maxHeight: 35)
                     
                     Button(action: {
                         goToAllEntries = true
                     }){
                         Text("View Dream Logs")
+                            .font(.title)
                             .foregroundColor(.white)
                     }.navigationDestination(isPresented: $goToAllEntries) {
-                        AllEntriesView()
+                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
                     }
                     .padding()
+                    .padding([.leading,.trailing], 15)
                     .background(CustomColor.buttonPeriwinkle)
                     .clipShape(Capsule())
                     
                 }
+                .padding(30)
+                .padding(.bottom, 80)
+                .background(
+                        Image("StarsBg")
+                    )
                 Spacer()
-                Image("MoonLogo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:300, height: 300)
+                VStack{
+                    Image("MoonLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:300, height: 300)
+                }
+                .padding(50)
+
+                Spacer()
                 
             }
         }
