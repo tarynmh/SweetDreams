@@ -13,16 +13,10 @@ struct AllEntriesView: View {
     
     @FetchRequest(entity: Entry.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) private var allEntries: FetchedResults<Entry>
     
-    private func updateEntry(_ entry: Entry) {
-            
-            entry.isFave = !entry.isFave
-            
-            do {
-                try viewContext.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+    @State private var goToHome: Bool = false
+
+    @Binding var goToNewEntry: Bool
+    @Binding var goToAllEntries: Bool
         
         func deleteEntry(at offsets: IndexSet) {
             offsets.forEach { index in
@@ -33,33 +27,6 @@ struct AllEntriesView: View {
                 } catch {
                     print(error.localizedDescription)
                 }
-            }
-        }
-    
-    private func getDreamIcon(_ value: String) -> any View {
-            let category = Category(rawValue: value)
-            
-            switch category {
-                case .nightmare:
-                return Image(systemName: "arrowtriangle.down.fill")
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundColor(CustomColor.badDream)
-                    .font(.system(size: 18))
-            case .neutral:
-                return Image(systemName: "plus.forwardslash.minus")
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundColor(CustomColor.neutralDream)
-                    .font(.system(size: 18))
-                case .good:
-                    return Image(systemName: "arrowtriangle.up.fill")
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundColor(CustomColor.goodDream)
-                    .font(.system(size: 18))
-                default:
-                return Image(systemName: "theatermasks")
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundColor(.blue)
-                    .font(.system(size: 18))
             }
         }
     
@@ -99,16 +66,27 @@ struct AllEntriesView: View {
                 LinearGradient(gradient: Gradient(colors: [CustomColor.Navy, CustomColor.SkyPurple]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 VStack {
+                    Text("Past Dreams")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
                     Divider()
                     Spacer()
                     ScrollView{
-                        ForEach(allEntries) { entry in
+                        ForEach(allEntries.filter{entry -> Bool in return entry.emotion == "Good Dream"}) { entry in
                             HStack {
                                 DreamEntryView(card: Card(title: entry.title!, topic: entry.topic!, emotion: entry.emotion!, isFave: entry.isFave, date:entry.date!), dreamIcon: getDreamIcon(entry.emotion!), dreamColor: getDreamColor(entry.emotion!))
                                     
                             }
                         }
                         .onDelete(perform: deleteEntry)
+                    }
+                }
+                .toolbar {
+                    ToolbarItemGroup(placement: .primaryAction) {
+                        Button("Home") {
+                            goToNewEntry = false
+                            goToAllEntries = false
+                        }
                     }
                 }
                 .padding(30)
@@ -122,12 +100,12 @@ struct AllEntriesView: View {
         
 //    }
 }
-
-struct AllEntriesView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            AllEntriesView()
-        }
-        
-    }
-}
+//
+//struct AllEntriesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            AllEntriesView()
+//        }
+//
+//    }
+//}

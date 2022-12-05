@@ -22,8 +22,14 @@ extension Category {
 }
 
 struct NewEntryView: View {
-    init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = .systemMint
+    @Binding var goToNewEntry: Bool
+    @Binding var goToAllEntries: Bool
+    init(goToNewEntry: Binding<Bool>, goToAllEntries: Binding<Bool>) {
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(CustomColor.buttonPurple)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+        self._goToNewEntry = goToNewEntry
+        self._goToAllEntries = goToAllEntries
     }
     
     
@@ -32,6 +38,8 @@ struct NewEntryView: View {
     @State private var title: String = ""
     @State private var topic: String = ""
     @State private var selectedCategory: Category = .neutral
+    
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(entity: Entry.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) private var allEntries: FetchedResults<Entry>
@@ -93,15 +101,25 @@ struct NewEntryView: View {
     }
     
     var body: some View {
-//        NavigationStack{
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [CustomColor.Navy, CustomColor.SkyPurple]), startPoint: .top, endPoint: .bottom)
                                 .ignoresSafeArea()
                 RoundedRectangle(cornerRadius: 20).fill(CustomColor.LavenderBox)
                 .padding(10)
-        
+                
+//                Image("CloudBg")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(height:300)
+//                    .padding(.top, 600)
                 
                 VStack(alignment: .center) {
+                    Text("How was your dream?")
+                        .foregroundColor(.white)
+                        .font(.system(size: 30))
+                    Divider()
+                        .overlay(.white)
+                        .padding(10)
                     TextField("Name your dream", text: $title)
                         .textFieldStyle(.roundedBorder)
                     Picker("Dream Type", selection: $selectedCategory) {
@@ -110,7 +128,6 @@ struct NewEntryView: View {
                                 .accentColor(.orange)
                         }
                     }.pickerStyle(.segmented)
-//                        .background(CustomColor.SkyPurple)
                         
                     
                     TextField("Describe your dream...", text: $topic, axis: .vertical)
@@ -124,7 +141,7 @@ struct NewEntryView: View {
                     }){
                         Text("Save")
                     }.navigationDestination(isPresented: $goToEntries) {
-                        AllEntriesView()
+                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
                     }
                     
                     .padding(10)
@@ -140,25 +157,18 @@ struct NewEntryView: View {
                 .background(
                         Image("StarsBg")
                     )
-                
-//                .navigationTitle("Sweet Dreams")
+            
             }
         }
-//        Image("CloudBg")
-//            .resizable()
-//            .scaledToFit()
-//            .frame(height:300, alignment: .bottom)
-        
-//    }
 }
 
-struct NewEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-//        NavigationView{
-//            let persistedContainer = CoreDataManager.shared.persistentContainer
-//            NewEntryView().environment(\.managedObjectContext, persistedContainer.viewContext)
-        NewEntryView()
-//        }
-    }
-}
+//struct NewEntryView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        NavigationView{
+////            let persistedContainer = CoreDataManager.shared.persistentContainer
+////            NewEntryView().environment(\.managedObjectContext, persistedContainer.viewContext)
+//        NewEntryView()
+////        }
+//    }
+//}
 
