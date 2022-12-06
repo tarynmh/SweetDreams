@@ -31,53 +31,56 @@ struct SortView: View {
                     Divider()
                         .overlay(.white)
                         .padding(25)
-                    Button(action: {
-                        goToGood = true
-                    }){
-                        Text("View Good Dreams")
-                            .font(.title)
-                            .foregroundColor(.white)
-                    }.navigationDestination(isPresented: $goToGood) {
-                        AllEntriesView(goToNewEntry: $goToNewEntry, goToAllEntries: $goToAllEntries, filterBy: "Good Dream")
-                    }
-                    .padding()
-                    .padding([.leading,.trailing], 20)
-                    .background(CustomColor.goodDream)
-                    .clipShape(Capsule())
+//                    Button(action: {
+//                        goToGood = true
+//                    }){
+//                        Text("View Good Dreams")
+//                            .font(.title)
+//                            .foregroundColor(.white)
+//                    }.navigationDestination(isPresented: $goToGood) {
+////                        AllEntriesView(goToNewEntry: $goToNewEntry, goToAllEntries: $goToAllEntries, filterBy: "Good Dream")
+//                        print("to be implemented")
+//                    }
+//                    .padding()
+//                    .padding([.leading,.trailing], 20)
+//                    .background(CustomColor.goodDream)
+//                    .clipShape(Capsule())
                     
                     Spacer()
                         .frame(maxHeight: 42)
                     
-                    Button(action: {
-                        goToNeutral = true
-                    }){
-                        Text("View Neutral Dreams")
-                            .font(.title)
-                            .foregroundColor(.white)
-                    }.navigationDestination(isPresented: $goToNeutral) {
-                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries, filterBy: "Neutral Dream")
-                    }
-                    .padding()
-                    .padding([.leading,.trailing], 15)
-                    .background(CustomColor.neutralDream)
-                    .clipShape(Capsule())
+//                    Button(action: {
+//                        goToNeutral = true
+//                    }){
+//                        Text("View Neutral Dreams")
+//                            .font(.title)
+//                            .foregroundColor(.white)
+//                    }.navigationDestination(isPresented: $goToNeutral) {
+////                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries, filterBy: "Neutral Dream")
+//                        print("to be implemented")
+//                    }
+//                    .padding()
+//                    .padding([.leading,.trailing], 15)
+//                    .background(CustomColor.neutralDream)
+//                    .clipShape(Capsule())
                     
                     Spacer()
                         .frame(maxHeight: 42)
                     
-                    Button(action: {
-                        goToBad = true
-                    }){
-                        Text("View Nightmares")
-                            .font(.title)
-                            .foregroundColor(.white)
-                    }.navigationDestination(isPresented: $goToBad) {
-                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries, filterBy: "Nightmare")
-                    }
-                    .padding()
-                    .padding([.leading,.trailing], 42)
-                    .background(CustomColor.badDream)
-                    .clipShape(Capsule())
+//                    Button(action: {
+//                        goToBad = true
+//                    }){
+//                        Text("View Nightmares")
+//                            .font(.title)
+//                            .foregroundColor(.white)
+//                    }.navigationDestination(isPresented: $goToBad) {
+////                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries, filterBy: "Nightmare")
+//                        print("to be implemented")
+//                    }
+//                    .padding()
+//                    .padding([.leading,.trailing], 42)
+//                    .background(CustomColor.badDream)
+//                    .clipShape(Capsule())
                     
                 }
                 .toolbar {

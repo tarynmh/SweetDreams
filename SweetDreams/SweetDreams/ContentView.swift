@@ -62,8 +62,8 @@ struct ContentView: View {
                             .font(.title)
                             .foregroundColor(.white)
                     }.navigationDestination(isPresented: $goToAllEntries) {
-//                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
-                        SortView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
+                        AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
+//                        SortView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
                     }
                     .padding()
                     .padding([.leading,.trailing], 15)
@@ -89,16 +89,15 @@ struct ContentView: View {
                 
             }
         }
+        .tint(.white)
+        .accentColor(.white)
     }
 }
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-//        NavigationStack{
-//            TitleView()
             let persistedContainer = CoreDataManager.shared.persistentContainer
             ContentView().environment(\.managedObjectContext, persistedContainer.viewContext)
-//        }
         
     }
 }
