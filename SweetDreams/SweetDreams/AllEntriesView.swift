@@ -13,27 +13,21 @@ struct AllEntriesView: View {
     
     @FetchRequest(entity: Entry.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) private var allEntries: FetchedResults<Entry>
     
+    // bool to go back home
     @State private var goToHome: Bool = false
 
+    // bools for popping past views off the nav stack and going back home
     @Binding var goToNewEntry: Bool
     @Binding var goToAllEntries: Bool
     
     @State var filterBy: String = "All Dreams"
-    @State var filterFlag: Bool = false
     @State var selectedDreamIndex = 0
     
-    static var uniqueKey: String {
-            UUID().uuidString
-    }
-
-//    static let options: [DropdownOption] = [
-//        DropdownOption(key: uniqueKey, value: "Good Dreams"),
-//        DropdownOption(key: uniqueKey, value: "Neutral Dreams"),
-//        DropdownOption(key: uniqueKey, value: "Nightmares"),
-//    ]
-    
+    // list for filtering
     var dreamTypes = ["All Dreams","Good Dreams", "Neutral Dreams", "Nightmares"]
         
+    
+    //function for deleting an entry (NOTE: only works when using a list, not a forEach at the moment)
     func deleteEntry(at offsets: IndexSet) {
         offsets.forEach { index in
             let entry = allEntries[index]
@@ -46,6 +40,7 @@ struct AllEntriesView: View {
         }
     }
     
+    // function to display a certain icon on the dream entry cards depending on the type of dream you had
     private func getDreamIcon(_ value: String) -> String {
             let category = Category(rawValue: value)
             
@@ -61,6 +56,7 @@ struct AllEntriesView: View {
             }
         }
     
+    // function to display a certain color of the icon for the dream entry cards depending on the type of dream you had
     private func getDreamColor(_ value: String) -> Color {
             let category = Category(rawValue: value)
             
@@ -77,15 +73,10 @@ struct AllEntriesView: View {
         }
     
     var body: some View {
-//        NavigationStack {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [CustomColor.Navy, CustomColor.SkyPurple]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 VStack() {
-//                    Text("Past Dreams")
-//                        .foregroundColor(.white)
-//                        .font(.largeTitle)
-//                    Divider()
                     VStack {
                         HStack(){
                             Spacer()
@@ -124,7 +115,6 @@ struct AllEntriesView: View {
                                 }
                             }
                             .onDelete(perform: deleteEntry)
-                    
                         }
                     }
                 }
@@ -144,8 +134,6 @@ struct AllEntriesView: View {
                 
             }
         }
-        
-//    }
 }
 //
 //struct AllEntriesView_Previews: PreviewProvider {

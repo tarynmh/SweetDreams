@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SortView: View {
+//    NOTE: ********* this view is unused at the moment, but may be turned into a  different view in the future. ********
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @Binding var goToNewEntry: Bool

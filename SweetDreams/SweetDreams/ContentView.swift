@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreData
 
+// struct for custom colors
+// NOTE: I tried to use extension Color, but it was giving me multiple errors. I will try to fix this in the future
 struct CustomColor {
     static let Navy = Color("Navy")
     static let SkyPurple = Color("SkyPurple")
@@ -23,6 +25,7 @@ struct CustomColor {
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+    // bools for going to other views
     @State private var goToNewEntry: Bool = false
     @State private var goToAllEntries: Bool = false
     
@@ -63,7 +66,6 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }.navigationDestination(isPresented: $goToAllEntries) {
                         AllEntriesView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
-//                        SortView(goToNewEntry: self.$goToNewEntry,goToAllEntries: self.$goToAllEntries)
                     }
                     .padding()
                     .padding([.leading,.trailing], 15)
