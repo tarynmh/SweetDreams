@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E766B73293E8BBA007D575B /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E766B72293E8BB9007D575B /* DropdownSelector.swift */; };
 		8EDFE32D29393BAF00A88DBD /* SweetDreamsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE32C29393BAF00A88DBD /* SweetDreamsApp.swift */; };
 		8EDFE32F29393BAF00A88DBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE32E29393BAF00A88DBD /* ContentView.swift */; };
 		8EDFE33129393BBA00A88DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDFE33029393BBA00A88DBD /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		8EDFE35F29393DE600A88DBD /* AllEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */; };
 		8EDFE36129393E5600A88DBD /* DreamEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE36029393E5600A88DBD /* DreamEntryView.swift */; };
 		8EDFE36329393E8700A88DBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE36229393E8700A88DBD /* Card.swift */; };
+		8EDFE365293D887B00A88DBD /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFE364293D887A00A88DBD /* SortView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E766B72293E8BB9007D575B /* DropdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
 		8EDFE32929393BAF00A88DBD /* SweetDreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetDreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDFE32C29393BAF00A88DBD /* SweetDreamsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDreamsApp.swift; sourceTree = "<group>"; };
 		8EDFE32E29393BAF00A88DBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEntriesView.swift; sourceTree = "<group>"; };
 		8EDFE36029393E5600A88DBD /* DreamEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamEntryView.swift; sourceTree = "<group>"; };
 		8EDFE36229393E8700A88DBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8EDFE364293D887A00A88DBD /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +115,10 @@
 				8EDFE32E29393BAF00A88DBD /* ContentView.swift */,
 				8EDFE35C29393D8F00A88DBD /* NewEntryView.swift */,
 				8EDFE35E29393DE600A88DBD /* AllEntriesView.swift */,
+				8EDFE364293D887A00A88DBD /* SortView.swift */,
 				8EDFE36029393E5600A88DBD /* DreamEntryView.swift */,
 				8EDFE36229393E8700A88DBD /* Card.swift */,
+				8E766B72293E8BB9007D575B /* DropdownSelector.swift */,
 				8EDFE33029393BBA00A88DBD /* Assets.xcassets */,
 				8EDFE33229393BBA00A88DBD /* Preview Content */,
 				8EDFE35929393C7400A88DBD /* SweetDreamsModel.xcdatamodeld */,
@@ -289,8 +295,10 @@
 				8EDFE35B29393C7400A88DBD /* SweetDreamsModel.xcdatamodeld in Sources */,
 				8EDFE32D29393BAF00A88DBD /* SweetDreamsApp.swift in Sources */,
 				8EDFE35D29393D8F00A88DBD /* NewEntryView.swift in Sources */,
+				8EDFE365293D887B00A88DBD /* SortView.swift in Sources */,
 				8EDFE35F29393DE600A88DBD /* AllEntriesView.swift in Sources */,
 				8EDFE36329393E8700A88DBD /* Card.swift in Sources */,
+				8E766B73293E8BBA007D575B /* DropdownSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

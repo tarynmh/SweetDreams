@@ -33,8 +33,9 @@ struct NewEntryView: View {
     }
     
     
-    // bool for button to save entry
+    // bool for going to all entries
     @State private var goToEntries: Bool = false
+    // picker and other input variables
     @State private var title: String = ""
     @State private var topic: String = ""
     @State private var selectedCategory: Category = .neutral
@@ -44,8 +45,8 @@ struct NewEntryView: View {
     
     @FetchRequest(entity: Entry.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) private var allEntries: FetchedResults<Entry>
 
+        // function to save dream to viewContext as a new entry entity
        private func saveDream() {
-
            do {
                let entry = Entry(context: viewContext)
                entry.title = title
@@ -58,22 +59,6 @@ struct NewEntryView: View {
            }
 
        }
-    
-    private func colorDreamType(_ value: String) -> Color {
-            let category = Category(rawValue: value)
-            
-            switch category {
-                case .nightmare:
-                return CustomColor.badDream
-            case .neutral:
-                return CustomColor.neutralDream
-                case .good:
-                    return CustomColor.goodDream
-                default:
-                return CustomColor.LavenderBox
-            }
-        }
-    
     
     private func updateEntry(_ entry: Entry) {
         
